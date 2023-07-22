@@ -8,7 +8,7 @@ const getMusicPath = (): Music[] => {
     const files = readdirSync(resolve(__dirname, '../music/'));
 
     const fileList: string[] = files.filter((name) => name.includes('.mp3'))
-    const filePathList = fileList.map((file) => 'http://localhost:7676/music/' + file);
+    const filePathList = fileList.map((file) => 'http://1.117.61.181:7676/music/' + file);
     const musicList = filePathList.map((path) => getDetails(path));
 
     return musicList;
