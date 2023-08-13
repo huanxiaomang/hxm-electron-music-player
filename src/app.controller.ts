@@ -9,11 +9,15 @@ export class AppController {
 
     @Get('/')
     getMusicList(): Music[] {
+        console.log('');
         return this.appService.getMusicList();
     }
+
+
 
     @Get('lyrics/:_name')
     getMusicLyrics(@Param('_name') name: string): string {
         return this.appService.getMusicLyrics(name);
     }
+
 }
